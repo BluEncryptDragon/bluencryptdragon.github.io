@@ -60,7 +60,7 @@
             padding: 1rem 2rem;
             position: fixed;
             width: 100%;
-            top: 46px; /* Adjusted to sit below banner */
+            top: 46px;
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
@@ -108,11 +108,11 @@
             cursor: pointer;
         }
 
-        /* Hero Section - adjusted padding for banner */
+        /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white;
-            padding: 166px 2rem 80px; /* Adjusted top padding */
+            padding: 166px 2rem 80px;
             text-align: center;
         }
 
@@ -240,6 +240,110 @@
             line-height: 1.8;
         }
 
+        /* Pricing Section */
+        .pricing {
+            padding: 80px 2rem;
+            background: white;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            border-color: #1e3c72;
+        }
+
+        .pricing-card.featured {
+            border-color: #1e3c72;
+            border-width: 3px;
+            position: relative;
+        }
+
+        .pricing-badge {
+            background: #1e3c72;
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-card h3 {
+            color: #1e3c72;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-card .price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #1e3c72;
+            margin: 1rem 0;
+        }
+
+        .pricing-card .price-note {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin: 1.5rem 0;
+            text-align: left;
+        }
+
+        .pricing-features li {
+            padding: 0.5rem 0;
+            color: #333;
+            display: flex;
+            align-items: start;
+            gap: 0.5rem;
+        }
+
+        .pricing-features li:before {
+            content: "✓";
+            color: #1e3c72;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .pricing-note {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .pricing-note h4 {
+            color: #1e3c72;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-note p {
+            color: #666;
+            line-height: 1.8;
+        }
+
         /* Stats Section */
         .stats {
             background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
@@ -267,7 +371,7 @@
         /* Testimonials */
         .testimonials {
             padding: 80px 2rem;
-            background: white;
+            background: #f8f9fa;
         }
 
         .testimonials-grid {
@@ -277,10 +381,11 @@
         }
 
         .testimonial-card {
-            background: #f8f9fa;
+            background: white;
             padding: 2rem;
             border-radius: 10px;
             border-left: 4px solid #1e3c72;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
         }
 
         .stars {
@@ -346,6 +451,13 @@
             margin-bottom: 1rem;
         }
 
+        .terms-section h3 {
+            color: #1e3c72;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            margin-top: 1.5rem;
+        }
+
         .terms-section p {
             color: #333;
             line-height: 1.8;
@@ -361,6 +473,13 @@
             color: #333;
             line-height: 1.8;
             margin-bottom: 0.5rem;
+        }
+
+        .terms-highlight {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            margin: 1rem 0;
         }
 
         .terms-footer {
@@ -523,11 +642,11 @@
             }
 
             nav {
-                top: 42px; /* Adjusted for smaller banner on mobile */
+                top: 42px;
             }
 
             .hero {
-                padding: 154px 2rem 60px; /* Adjusted for mobile */
+                padding: 154px 2rem 60px;
             }
 
             .nav-links {
@@ -571,6 +690,7 @@
             }
 
             .services-grid,
+            .pricing-grid,
             .testimonials-grid,
             .contact-grid {
                 grid-template-columns: 1fr;
@@ -584,7 +704,7 @@
         <div class="holiday-banner-content">
             <span class="holiday-icon">🏖️</span>
             <div class="holiday-text">
-                <strong>ProSolv IT is currently unavailable.</strong> <strong>All Services, including Emergency Support, will resume on</strong> <strong>5 January 2026</strong>
+                ProSolv IT is currently unavailable. All services, including emergency support, will resume on <strong>5 January 2026</strong>.
             </div>
         </div>
     </div>
@@ -596,6 +716,7 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="#terms">Terms & Conditions</a></li>
@@ -652,6 +773,81 @@
                     <h3>Software Installation & Configuration</h3>
                     <p>Expert software deployment, configuration, and integration services. Get your applications set up correctly and optimized for performance.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2 class="section-title">Transparent Pricing</h2>
+            <p class="section-subtitle">Clear, competitive rates with no hidden fees</p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card featured">
+                    <span class="pricing-badge">Most Popular</span>
+                    <h3>Standard Service</h3>
+                    <div class="price">$190</div>
+                    <p class="price-note">For first hour</p>
+                    <ul class="pricing-features">
+                        <li>$60 callout fee</li>
+                        <li>$130/hour labour</li>
+                        <li>Charged in 15-min increments ($32.50)</li>
+                        <li>Mon-Fri 9am-5pm</li>
+                        <li>1-hour minimum</li>
+                        <li>Covers Christchurch area</li>
+                    </ul>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Same-Day/Emergency</h3>
+                    <div class="price">$250</div>
+                    <p class="price-note">For first hour</p>
+                    <ul class="pricing-features">
+                        <li>$90 callout fee</li>
+                        <li>$160/hour labour</li>
+                        <li>Charged in 15-min increments ($40)</li>
+                        <li>Subject to availability</li>
+                        <li>Mon-Fri 9am-5pm</li>
+                        <li>When you need help now</li>
+                    </ul>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>After Hours</h3>
+                    <div class="price">$295</div>
+                    <p class="price-note">For first hour</p>
+                    <ul class="pricing-features">
+                        <li>$100 callout fee</li>
+                        <li>$195/hour labour</li>
+                        <li>Charged in 15-min increments ($48.75)</li>
+                        <li>Evenings & weekends</li>
+                        <li>By arrangement only</li>
+                        <li>Premium after-hours rate</li>
+                    </ul>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Remote Support</h3>
+                    <div class="price">$105</div>
+                    <p class="price-note">Per hour</p>
+                    <ul class="pricing-features">
+                        <li>No callout fee</li>
+                        <li>$105/hour labour</li>
+                        <li>Charged in 15-min increments ($26.25)</li>
+                        <li>30-minute minimum ($52.50)</li>
+                        <li>Available during business hours</li>
+                        <li>Convenient phone/online support</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pricing-note">
+                <h4>Additional Information</h4>
+                <p><strong>Return Visits:</strong> If we need to return for the same issue within 7 days, no additional callout fee is charged (hourly rates apply).</p>
+                <p><strong>Travel:</strong> Free within Christchurch city. Additional charges apply for Selwyn/Rolleston/Lincoln (+$20), Rangiora/Kaiapoi (+$30).</p>
+                <p><strong>Payment:</strong> We accept bank transfer, cash, and EFTPOS. Payment is due upon completion unless otherwise arranged.</p>
+                <p><strong>Parts & Software:</strong> Charged separately at cost plus reasonable markup where applicable.</p>
             </div>
         </div>
     </section>
@@ -732,25 +928,66 @@
 
             <div class="terms-section">
                 <h2>3. No Guarantee of Outcome</h2>
-                <p>While we take reasonable care and use best efforts, we do not guarantee that all issues can be resolved, particularly where problems are caused by hardware failure, third‑party software, malware, or existing system faults.</p>
+                <p>While we take reasonable care and use best efforts, we do not guarantee that all issues can be resolved, particularly where problems are caused by hardware failure, third-party software, malware, or existing system faults.</p>
             </div>
 
             <div class="terms-section">
                 <h2>4. Data & Backups</h2>
                 <p>The client is responsible for ensuring important data is backed up before work begins.</p>
-                <p>ProSolv IT is not responsible for data loss resulting from pre‑existing issues, hardware failure, malware, or actions taken at the client's request.</p>
+                <p>ProSolv IT is not responsible for data loss resulting from pre-existing issues, hardware failure, malware, or actions taken at the client's request.</p>
             </div>
 
             <div class="terms-section">
                 <h2>5. Payment Terms</h2>
-                <p>Invoices are due by the date shown on the invoice, unless otherwise agreed in writing.</p>
-                <p>Late payment may result in additional fees and/or refusal of future work.</p>
+                <p>Invoices are due within 14 days of the invoice date, unless otherwise agreed in writing.</p>
+                <p>Late payment (over 14 days overdue) may result in:</p>
+                <ul>
+                    <li>Interest charges at a reasonable rate</li>
+                    <li>Referral to debt collection</li>
+                    <li>Refusal of future work until account is settled</li>
+                </ul>
+                <h3>Payment Methods</h3>
+                <p>Payment is accepted by:</p>
+                <ul>
+                    <li>Bank transfer</li>
+                    <li>Cash</li>
+                    <li>EFTPOS</li>
+                </ul>
+                <p>Payment is due upon completion of service unless otherwise agreed in writing.</p>
             </div>
 
             <div class="terms-section">
                 <h2>6. Fees & Charges</h2>
-                <p>All fees will be discussed or estimated before work begins where possible.</p>
-                <p>Additional work requested beyond the original scope may incur extra charges.</p>
+                <p>Current rates are available on our website at <a href="#pricing" style="color: #1e3c72; text-decoration: underline;">prosolvit.co.nz/pricing</a> or by request.</p>
+                <p>All fees will be discussed or estimated before work begins where possible. Estimates are provided in good faith but may change if additional issues are discovered.</p>
+                <p>Additional work requested beyond the original scope may incur extra charges. The client will be notified before additional charges are incurred where practical.</p>
+                
+                <h3>Standard Rates (effective December 2025)</h3>
+                <ul>
+                    <li><strong>Standard callout:</strong> $60 + $130/hour (charged in 15-minute increments)</li>
+                    <li><strong>Same-day/emergency:</strong> $90 callout + $160/hour</li>
+                    <li><strong>After hours (evenings/weekends):</strong> $100 callout + $195/hour (by arrangement only)</li>
+                    <li><strong>Remote support:</strong> $105/hour (30-minute minimum, no callout fee)</li>
+                    <li><strong>Travel outside Christchurch city:</strong> Additional charges apply</li>
+                </ul>
+                
+                <h3>Return Visit Policy</h3>
+                <div class="terms-highlight">
+                    <p><strong>If we need to return to address the same issue within 7 days of the original service, no additional callout fee will be charged.</strong> Hourly rates will apply for time spent on-site.</p>
+                </div>
+                <p>This applies to:</p>
+                <ul>
+                    <li>Follow-up work on the same problem</li>
+                    <li>Warranty issues related to our work</li>
+                    <li>Incomplete jobs requiring a second visit</li>
+                </ul>
+                <p>This does NOT apply to:</p>
+                <ul>
+                    <li>New or different issues</li>
+                    <li>Additional work requested by the client</li>
+                    <li>Issues caused by client actions after our service</li>
+                    <li>Returns after 7 days</li>
+                </ul>
             </div>
 
             <div class="terms-section">
@@ -760,33 +997,73 @@
                     <li>Provide accurate information about issues and systems</li>
                     <li>Ensure legal ownership or permission to work on devices</li>
                     <li>Cooperate during troubleshooting and testing</li>
+                    <li>Be present or available during scheduled appointments</li>
                 </ul>
             </div>
 
             <div class="terms-section">
-                <h2>8. Liability Limitation</h2>
+                <h2>8. Cancellations & No-Shows</h2>
+                <p>Cancellations with less than 24 hours notice may incur a cancellation fee of up to $60.</p>
+                <p>No-shows (client not present at scheduled time) may incur the full callout charge.</p>
+                <p>We will make reasonable efforts to contact you before charging for a no-show.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>9. Warranty on Work</h2>
+                <p>Work completed is warranted for 30 days from the date of service.</p>
+                <p>The warranty covers the specific work performed, not pre-existing or new issues.</p>
+                <p>The warranty is void if the client or third parties modify systems after our service.</p>
+                <p>Parts may carry separate manufacturer warranty.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>10. Liability Limitation</h2>
                 <p>To the maximum extent permitted under New Zealand law, ProSolv IT's liability is limited to the cost of the service provided.</p>
                 <p>We are not liable for indirect or consequential loss, including loss of business, profit, or data.</p>
                 <p>Nothing in these terms limits rights under the Consumer Guarantees Act 1993 where it applies.</p>
             </div>
 
             <div class="terms-section">
-                <h2>9. Third‑Party Services & Software</h2>
-                <p>We are not responsible for faults, outages, or issues caused by third‑party software, hardware manufacturers, internet providers, or cloud services.</p>
+                <h2>11. Third-Party Services & Software</h2>
+                <p>We are not responsible for faults, outages, or issues caused by third-party software, hardware manufacturers, internet providers, or cloud services.</p>
             </div>
 
             <div class="terms-section">
-                <h2>10. Termination of Service</h2>
+                <h2>12. Emergency & After-Hours Service</h2>
+                <p>Emergency callouts are subject to availability and charged at premium rates as outlined in our pricing schedule.</p>
+                <p>After-hours service (evenings and weekends) is by arrangement only and charged at premium rates.</p>
+                <p>We do not guarantee availability for emergency after-hours requests.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>13. Remote Access Services</h2>
+                <p>Remote support may be provided via secure remote access tools (e.g., TeamViewer, AnyDesk).</p>
+                <p>The client must provide permission before remote access begins.</p>
+                <p>Remote sessions may be logged for quality and security purposes.</p>
+                <p>The client is responsible for maintaining internet connectivity during remote sessions.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>14. Termination of Service</h2>
                 <p>Either party may terminate services at any time. The client remains responsible for payment of work already completed.</p>
             </div>
 
             <div class="terms-section">
-                <h2>11. Governing Law</h2>
+                <h2>15. Privacy & Confidentiality</h2>
+                <p>We handle client information in accordance with the Privacy Act 2020.</p>
+                <p>We will maintain confidentiality of client data and business information encountered during service.</p>
+                <p>Client information will not be shared with third parties except where required by law or with explicit consent.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>16. Governing Law</h2>
                 <p>These Terms & Conditions are governed by the laws of New Zealand.</p>
+                <p>Any disputes will be subject to the jurisdiction of New Zealand courts.</p>
             </div>
 
             <div class="terms-footer">
                 <p>If you have any questions about these Terms & Conditions, please contact ProSolv IT before work begins.</p>
+                <p><strong>Contact:</strong> (+64) 022-522-3014 | prosolvit-online@outlook.com</p>
             </div>
         </div>
     </section>
@@ -803,7 +1080,7 @@
                     <h3>Phone</h3>
                     <p>(+64) 022-522-3014</p>
                     <p>Mon-Fri: 9am-5pm</p>
-                    <p>Emergency Support</p>
+                    <p>Emergency Support Available</p>
                 </div>
                 <div class="contact-card">
                     <div class="contact-icon">✉️</div>
@@ -878,6 +1155,7 @@
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Services</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="#terms">Terms & Conditions</a></li>
@@ -897,4 +1175,65 @@
                 <ul>
                     <li>📞 (+64) 022-522-3014</li>
                     <li>✉️ prosolvit-online@outlook.com</li>
-                    <li>📍 Christchurch 
+                    <li>📍 Christchurch, Canterbury, NZ</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 ProSolv IT. All rights reserved. | Professional IT Services & Computer Support</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        const formMessage = document.getElementById('formMessage');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Show success message
+            formMessage.textContent = "Thank you! Your message has been sent successfully. We'll get back to you shortly.";
+            formMessage.className = 'form-message success';
+            formMessage.style.display = 'block';
+            
+            // Reset form
+            contactForm.reset();
+            
+            // Hide message after 5 seconds
+            setTimeout(() => {
+                formMessage.style.display = 'none';
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
