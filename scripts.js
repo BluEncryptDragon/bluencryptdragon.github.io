@@ -99,3 +99,30 @@ if (contactForm && formMessage) {
         }
     });
 }
+
+// Hide/show navigation on scroll (mobile friendly)
+let lastScrollTop = 0;
+const nav = document.querySelector('nav');
+let scrollTimeout;
+
+window.addEventListener('scroll', function() {
+    // Clear the timeout throughout the scroll
+    window.clearTimeout(scrollTimeout);
+    
+    // Set a timeout to run after scrolling ends
+    scrollTimeout = setTimeout(function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+            // Scrolling down & past 100px
+            nav.style.transform = 'translateY(-100%)';
+            nav.style.transition = 'transform 0.3s ease-in-out';
+        } else {
+            // Scrolling up
+            nav.style.transform = 'translateY(0)';
+            nav.style.transition = 'transform 0.3s ease-in-out';
+        }
+        
+        lastScrollTop = scrollTop;
+    }, 100); // Wait 100ms after scroll stops
+});
