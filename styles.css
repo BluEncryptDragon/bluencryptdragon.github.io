@@ -596,6 +596,16 @@ nav {
     color: #666;
 }
 
+.contact-card {
+    text-decoration: none;
+    color: inherit;
+}
+
+.contact-card:hover {
+    cursor: pointer;
+}
+
+
 .contact-form {
     max-width: 600px;
     margin: 0 auto;
