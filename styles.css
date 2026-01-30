@@ -582,6 +582,14 @@ nav {
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
 
+.contact-card {
+    text-decoration: none;               /* remove underline */
+    color: inherit;                      /* keep text color */
+    -webkit-tap-highlight-color: transparent;  /* removes blue highlight on tap */
+    -webkit-text-decoration-skip: none;       /* prevents iOS underline */
+}
+
+
 .contact-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
