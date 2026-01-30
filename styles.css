@@ -605,6 +605,19 @@ nav {
     cursor: pointer;
 }
 
+.contact-card {
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    cursor: pointer;
+}
+
+
 
 .contact-form {
     max-width: 600px;
