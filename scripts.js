@@ -139,3 +139,23 @@ window.addEventListener('scroll', function() {
         lastScrollTop = scrollTop;
     }, 100); // Wait 100ms after scroll stops
 });
+
+// Fade navbar on scroll
+let lastScrollTop = 0;
+const nav = document.querySelector('nav');
+
+window.addEventListener('scroll', function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (scrollTop > 80) {
+        // Scrolled down - fade out
+        nav.style.opacity = '0';
+        nav.style.pointerEvents = 'none';
+    } else {
+        // At top - fade in
+        nav.style.opacity = '1';
+        nav.style.pointerEvents = 'auto';
+    }
+    
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+}, false);
