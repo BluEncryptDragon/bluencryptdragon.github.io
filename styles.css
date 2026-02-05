@@ -18,14 +18,14 @@ body {
 /* Navigation */
 nav {
     background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
-    padding: 1rem 2rem;
+    padding: 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     transition: opacity 0.3s ease-in-out;
-    height: 120px;
+    height: 90px;
     display: flex;
     align-items: center;
 }
@@ -37,6 +37,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 2rem;  /* Add padding back to container */
 }
 
 /* Logo styling */
@@ -44,12 +45,16 @@ nav {
     display: flex;
     align-items: center;
     text-decoration: none;
+    height: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 .logo-img {
-    height: 100px;
+    height: 90px;
     width: auto;
     object-fit: contain;
+    display: block;
     transition: transform 0.3s ease;
 }
 
@@ -123,12 +128,40 @@ nav {
     display: inline-block;
 }
 
-.btn-primary {
+/* Services section button - Red */
+.services .btn-primary {
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+    color: white;
+    padding: 1.2rem 3rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    box-shadow: 0 6px 20px rgba(220, 38, 38, 0.4);
+}
+
+.services .btn-primary:hover {
+    background: linear-gradient(135deg, #b91c1c 0%, #991b1b 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(220, 38, 38, 0.5);
+}
+
+/* Hero section button - Keep white */
+.hero .btn-primary {
     background: white;
     color: #1e3c72;
 }
 
-.btn-primary:hover {
+.hero .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255,255,255,0.3);
+}
+
+/* Stats/CTA section button - Keep white */
+.stats .btn-primary {
+    background: white;
+    color: #1e3c72;
+}
+
+.stats .btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(255,255,255,0.3);
 }
