@@ -35,6 +35,30 @@ nav {
     align-items: center;
 }
 
+/* Logo styling */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 100px; /* Makes logo nice and visible - adjust as needed */
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.05); /* Subtle hover effect */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .logo-img {
+        height: 45px; /* Slightly smaller on mobile */
+    }
+}
+
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
