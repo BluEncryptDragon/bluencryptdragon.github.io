@@ -10,6 +10,143 @@
     <meta name="description" content="ProSolv IT - Professional IT services and computer support in Christchurch and Canterbury. Expert security solutions, reliable support, and cutting-edge technology services.">
     <title>ProSolv IT - Professional IT Services & Computer Support | Christchurch</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Trust Indicators Styling */
+        .trust-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+            opacity: 0.95;
+        }
+
+        .trust-indicators span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+            color: white;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 0.5rem 1.2rem;
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+        }
+
+        /* How It Works Section */
+        .how-it-works {
+            padding: 4rem 1rem;
+            background: #f8f9fa;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .process-step:hover {
+            transform: translateY(-5px);
+        }
+
+        .process-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin: 0 auto 1.5rem;
+        }
+
+        .process-step h3 {
+            color: #1e3c72;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .process-step p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Emergency Actions Enhancement */
+        .emergency-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* CTA Section Enhancement */
+        .cta-buttons-triple {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Testimonial CTA */
+        .testimonial-cta {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .testimonial-cta p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .trust-indicators {
+                gap: 1rem;
+            }
+
+            .trust-indicators span {
+                font-size: 0.85rem;
+                padding: 0.4rem 1rem;
+            }
+
+            .emergency-actions {
+                flex-direction: column;
+            }
+
+            .emergency-actions .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .cta-buttons-triple {
+                flex-direction: column;
+            }
+
+            .cta-buttons-triple .btn {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -49,8 +186,14 @@
    class="btn btn-primary">
    Book an Appointment
 </a>
-
                 <a href="services.html" class="btn btn-secondary">View Our Services</a>
+            </div>
+
+            <!-- NEW: Trust Indicators -->
+            <div class="trust-indicators">
+                <span>✓ 7+ Years Experience</span>
+                <span>✓ Same-Day Service Available</span>
+                <span>✓ Emergency Support 24/7</span>
             </div>
         </div>
     </section>
@@ -64,8 +207,10 @@
                     <h2>Emergency & After-Hours Support</h2>
                     <p>After-hours, weekend, and rapid response IT support available — with clear, upfront pricing based on urgency</p>
                 </div>
+                <!-- IMPROVED: Added direct call option -->
                 <div class="emergency-actions">
-                    <a href="pricing.html" class="btn btn-primary">View Emergency Rates</a>
+                    <a href="tel:+64225223014" class="btn btn-primary">📞 Call Now: 022-522-3014</a>
+                    <a href="pricing.html" class="btn btn-secondary">View Emergency Rates</a>
                 </div>
             </div>
         </div>
@@ -108,8 +253,39 @@
                     <p>Expert software deployment, configuration, and integration services. Get your applications set up correctly and optimized for performance.</p>
                 </div>
             </div>
+            <!-- IMPROVED: Added booking option alongside view all -->
             <div style="text-align: center; margin-top: 3rem;">
                 <a href="services.html" class="btn btn-primary">View All Services</a>
+                <p style="margin: 1rem 0; color: #666; font-size: 1rem;">or</p>
+                <a href="https://outlook.office.com/book/ProSolvIT1@prosolvit.co.nz/" 
+                   target="_blank"
+                   rel="noopener"
+                   class="btn btn-secondary">Book a Service Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">Getting expert IT support is simple and straightforward</p>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="process-number">1</div>
+                    <h3>Book or Call</h3>
+                    <p>Schedule an appointment online or call us directly for urgent issues. We respond quickly to all requests.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">2</div>
+                    <h3>We Diagnose</h3>
+                    <p>Our expert technicians assess your issue and provide a clear explanation with upfront pricing.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">3</div>
+                    <h3>Fast Solution</h3>
+                    <p>We resolve your IT problems efficiently with same-day service whenever possible.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -124,8 +300,8 @@
                     <p>Years Experience</p>
                 </div>
                 <div class="stat-item">
-                    <h3>200+</h3>
-                    <p>Happy Clients</p>
+                    <h3>250+</h3>
+                    <p>Projects Completed</p>
                 </div>
                 <div class="stat-item">
                     <h3>Emergency</h3>
@@ -163,6 +339,15 @@
                     <p class="testimonial-role">Office Administrator</p>
                 </div>
             </div>
+
+            <!-- NEW: Testimonial CTA -->
+            <div class="testimonial-cta">
+                <p>Ready to experience the same level of professional service?</p>
+                <a href="https://outlook.office.com/book/ProSolvIT1@prosolvit.co.nz/" 
+                   target="_blank"
+                   rel="noopener"
+                   class="btn btn-primary">Book Your Appointment</a>
+            </div>
         </div>
     </section>
 
@@ -171,8 +356,13 @@
         <div class="container" style="text-align: center;">
             <h2 class="section-title" style="color: white;">Ready to Get Started?</h2>
             <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.95;">Contact us today for a consultation and let us help you with your IT needs</p>
-            <div class="cta-buttons">
-                <a href="contact.html" class="btn btn-primary">Contact Us Now</a>
+            <!-- IMPROVED: Added booking as primary option with three buttons -->
+            <div class="cta-buttons-triple">
+                <a href="https://outlook.office.com/book/ProSolvIT1@prosolvit.co.nz/" 
+                   target="_blank"
+                   rel="noopener"
+                   class="btn btn-primary">Book Appointment</a>
+                <a href="contact.html" class="btn btn-secondary">Contact Us</a>
                 <a href="pricing.html" class="btn btn-secondary">View Pricing</a>
             </div>
         </div>

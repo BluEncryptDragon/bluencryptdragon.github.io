@@ -164,6 +164,74 @@
             min-height: 150px;
             resize: vertical;
         }
+
+        /* Booking Button Variations */
+        .booking-cta {
+            text-align: center;
+            padding: 2rem 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .booking-cta-primary {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .booking-cta-secondary {
+            background: #ffffff;
+        }
+
+        .booking-cta-footer {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            border-radius: 12px;
+            padding: 3rem 2rem;
+            margin: 3rem auto;
+        }
+
+        .booking-cta-footer h3,
+        .booking-cta-footer p {
+            color: white;
+        }
+
+        .booking-cta h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #1e3c72;
+        }
+
+        .booking-cta p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .btn-booking {
+            display: inline-block;
+            font-size: 1.1rem;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(30, 60, 114, 0.3);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .btn-booking:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(30, 60, 114, 0.4);
+        }
+
+        .btn-booking-white {
+            background: white;
+            color: #1e3c72;
+        }
+
+        .btn-booking-white:hover {
+            background: #f8f9fa;
+        }
     </style>
 </head>
 <body>
@@ -239,63 +307,113 @@
     </div>
 </section>
 
+<!-- BOOKING BUTTON #1 - Top Placement (Primary CTA) -->
+<section class="booking-cta booking-cta-primary">
+    <div class="container">
+        <h3>🗓️ Book Your Appointment Now</h3>
+        <p>Skip the wait! Schedule your IT service at a time that works for you.</p>
+        <a href="https://outlook.office.com/book/ProSolvIT1@prosolvit.co.nz/?ismsaljsauthenabled"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn btn-primary btn-booking">
+            Schedule Appointment
+        </a>
+    </div>
+</section>
 
-            <!-- Before You Book Section -->
-            <div style="max-width: 800px; margin: 0 auto 3rem; background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border-left: 4px solid #1e3c72;">
-                <h3 style="color: #1e3c72; margin-bottom: 1rem; font-size: 1.5rem;">Before You Book</h3>
-                <p style="color: #333; line-height: 1.8; margin-bottom: 1rem;">To ensure we can help you efficiently, please note:</p>
-                <ul style="color: #333; line-height: 1.8; margin-left: 1.5rem;">
-                    <li>We provide residential IT support only</li>
-                    <li>Proof of device or account ownership may be required</li>
-                    <li>Data recovery and repairs are best-effort</li>
-                    <li>Older computers may not be economical to repair</li>
-                    <li>Additional issues discovered during a visit may require extra time</li>
-                    <li>We do not offer password bypassing or account hacking services</li>
-                </ul>
-                <p style="color: #666; font-style: italic; margin-top: 1rem;">If you're unsure whether your issue is within our scope, feel free to contact us before booking.</p>
-            </div>
+<!-- Before You Book Section -->
+<div style="max-width: 800px; margin: 3rem auto; background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border-left: 4px solid #1e3c72;">
+    <h3 style="color: #1e3c72; margin-bottom: 1rem; font-size: 1.5rem;">Before You Book</h3>
+    <p style="color: #333; line-height: 1.8; margin-bottom: 1rem;">To ensure we can help you efficiently, please note:</p>
+    <ul style="color: #333; line-height: 1.8; margin-left: 1.5rem;">
+        <li>We provide residential IT support only</li>
+        <li>Proof of device or account ownership may be required</li>
+        <li>Data recovery and repairs are best-effort</li>
+        <li>Older computers may not be economical to repair</li>
+        <li>Additional issues discovered during a visit may require extra time</li>
+        <li>We do not offer password bypassing or account hacking services</li>
+    </ul>
+    <p style="color: #666; font-style: italic; margin-top: 1rem;">If you're unsure whether your issue is within our scope, feel free to contact us before booking.</p>
+</div>
 
-            <form class="contact-form" id="contactForm">
-                <div class="form-message" id="formMessage"></div>
-                
-                <div class="form-group">
-                    <label for="name">Full Name *</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone">
-                </div>
-                
-                <div class="form-group">
-                    <label for="service">Service Interested In</label>
-                    <select id="service" name="service">
-                        <option value="">Select a service...</option>
-                        <option value="security">Computer Security & Threat Protection</option>
-                        <option value="network">Network Setup & Security</option>
-                        <option value="camera">Security Camera Setup</option>
-                        <option value="maintenance">Windows Maintenance & Hardware Support</option>
-                        <option value="backup">Data Backup & Recovery</option>
-                        <option value="software">Software Installation & Configuration</option>
-                        <option value="other">Other / General Inquiry</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Message *</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                
-                <button type="submit" class="btn-send-message">Send Message</button>
-            </form>
+<!-- BOOKING BUTTON #2 - Middle Placement (After Information) -->
+<section class="booking-cta booking-cta-secondary">
+    <div class="container">
+        <p style="font-size:1.1rem; margin-bottom:1.2rem; color: #333;">
+            Ready to book an appointment or need help today?
+        </p>
+        <a href="https://outlook.office.com/book/ProSolvIT1@prosolvit.co.nz/?ismsaljsauthenabled"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn btn-primary btn-booking">
+            Book an Appointment
+        </a>
+    </div>
+</section>
+
+<!-- Contact Form Section -->
+<section style="padding: 3rem 1rem;">
+    <div class="container">
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <h2 style="color: #1e3c72; font-size: 2rem; margin-bottom: 0.5rem;">Or Send Us a Message</h2>
+            <p style="color: #666; font-size: 1.1rem;">Prefer to reach out directly? Fill out the form below and we'll get back to you within 24 hours.</p>
         </div>
-    </section>
+
+        <form class="contact-form" id="contactForm">
+            <div class="form-message" id="formMessage"></div>
+            
+            <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            
+            <div class="form-group">
+                <label for="service">Service Interested In</label>
+                <select id="service" name="service">
+                    <option value="">Select a service...</option>
+                    <option value="security">Computer Security & Threat Protection</option>
+                    <option value="network">Network Setup & Security</option>
+                    <option value="camera">Security Camera Setup</option>
+                    <option value="maintenance">Windows Maintenance & Hardware Support</option>
+                    <option value="backup">Data Backup & Recovery</option>
+                    <option value="software">Software Installation & Configuration</option>
+                    <option value="other">Other / General Inquiry</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn-send-message">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<!-- BOOKING BUTTON #3 - Footer Placement (Last Chance CTA) -->
+<section class="booking-cta booking-cta-footer">
+    <div class="container">
+        <h3>⚡ Need Immediate IT Support?</h3>
+        <p>Don't wait! Book your appointment now and get expert help when you need it most.<br>Same-day service available for urgent issues.</p>
+        <a href="https://outlook.office.com/book/ProSolvIT1@prosolvit.co.nz/?ismsaljsauthenabled"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn btn-booking btn-booking-white">
+            Book Now - Get Help Fast
+        </a>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer>
@@ -347,6 +465,7 @@
     </ul>
 </div>
 
+
 <div class="footer-section">
                 <h3>Follow Us</h3>
                 <div class="social-links">
@@ -362,6 +481,9 @@
                     </a>
                 </div>
             </div>
+
+     
+
 
         </div>
         <div class="footer-bottom">
