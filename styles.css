@@ -79,6 +79,19 @@ nav {
     opacity: 0.8;
 }
 
+.nav-bookings {
+    background-color: #0066B8;
+    color: #ffffff !important;
+    padding: 8px 14px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.nav-bookings:hover {
+    background-color: #004f8a;
+}
+
+
 .mobile-menu-btn {
     display: none;
     background: none;
