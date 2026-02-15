@@ -19,9 +19,11 @@ body {
 nav {
     background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
     padding: 0;
+    margin: 0;  /* Add this to remove any margin */
     position: fixed;
     width: 100%;
     top: 0;
+    left: 0;  /* Add this to ensure it starts at the very left */
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     transition: opacity 0.3s ease-in-out;
@@ -31,13 +33,13 @@ nav {
 }
 
 .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;  /* Add padding back to container */
+    padding: 0 2rem 0 0;  /* Only right padding */
 }
 
 /* Logo styling */
@@ -46,8 +48,8 @@ nav {
     align-items: center;
     text-decoration: none;
     height: 100%;
-    padding: 0;
-    margin: 0;
+    padding: 0;  /* Remove all padding */
+    margin: 0;   /* Remove all margin */
 }
 
 .logo-img {
@@ -56,6 +58,8 @@ nav {
     object-fit: contain;
     display: block;
     transition: transform 0.3s ease;
+    margin: 0;   /* Remove all margin */
+    padding: 0;  /* Remove all padding */
 }
 
 .logo-img:hover {
@@ -253,7 +257,7 @@ nav {
 }
 
 .emergency-text p {
-    color: #78350f;
+    color: white;  /* Change from #78350f to white */
     font-size: 1.1rem;
     line-height: 1.6;
 }
