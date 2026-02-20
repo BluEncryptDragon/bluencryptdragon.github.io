@@ -773,6 +773,10 @@ footer {
         padding: 0.5rem 1rem;
     }
 
+    .nav-container {
+        padding-left: 0;  /* add this */
+    }
+
     .logo-img {
         height: 70px !important;
     }
