@@ -74,7 +74,7 @@ nav {
     margin-left: 50px;
     margin-right: auto; /* keeps it snug near the logo */
     white-space: nowrap;
-    transform: skewX(-10deg);
+    transform: skewX(-25deg);
     
 }
 
