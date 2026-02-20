@@ -770,11 +770,17 @@ footer {
 @media (max-width: 768px) {
     nav {
         height: 70px;
-        padding: 0.5rem 1rem;
+        padding: 0.5rem 0;
     }
 
     .nav-container {
-        padding-left: 0;  /* add this */
+        padding: 0;
+        padding-right: 1rem;
+    }
+
+    .logo {
+        margin-left: 0;
+        padding-left: 0;
     }
 
     .logo-img {
