@@ -777,6 +777,10 @@ footer {
         height: 50px;
     }
 
+    .alias {
+        font-size: 1rem;  /* add this line */
+    
+
     .hero, .page-header {
         padding: 100px 2rem 60px;
     }
