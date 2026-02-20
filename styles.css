@@ -66,6 +66,18 @@ nav {
     transform: scale(1.05);
 }
 
+.alias {
+    color: #ffffff;
+    font-family: 'Trajan Pro', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-left: 50px;
+    margin-right: auto; /* keeps it snug near the logo */
+    white-space: nowrap;
+    transform: skewX(-10deg);
+    
+}
+
 .nav-links {
     display: flex;
     list-style: none;
