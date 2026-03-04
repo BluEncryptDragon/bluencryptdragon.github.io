@@ -367,23 +367,7 @@
     </div>
 </footer>
 
-<script>
-    const menuBtn = document.getElementById('mobileMenuBtn');
-    const navLinks = document.getElementById('navLinks');
-
-    menuBtn.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        menuBtn.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
-    });
-
-    // Close menu when a nav link is clicked
-    navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-            menuBtn.textContent = '☰';
-        });
-    });
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
