@@ -368,6 +368,19 @@
 </footer>
 
 <script src="script.js"></script>
+<script>
+    // Inline fallback for mobile menu
+    document.getElementById('mobileMenuBtn').onclick = function() {
+        var menu = document.getElementById('navLinks');
+        if (menu.classList.contains('active')) {
+            menu.classList.remove('active');
+            this.innerHTML = '&#9776;';
+        } else {
+            menu.classList.add('active');
+            this.innerHTML = '&#10005;';
+        }
+    };
+</script>
 
 </body>
 </html>
