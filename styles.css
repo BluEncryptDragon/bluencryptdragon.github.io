@@ -793,7 +793,8 @@ footer {
     nav {
         height: 60px !important;
         padding: 0 !important;
-        overflow: hidden !important;
+        overflow: visible !important;
+        position: relative !important;
     }
 
     .nav-container {
@@ -814,6 +815,7 @@ footer {
         overflow: hidden !important;
         flex-shrink: 0 !important;
         margin-right: 0 !important;
+        align-self: stretch !important;
     }
 
     .logo {
@@ -821,15 +823,14 @@ footer {
         align-items: center !important;
         height: 60px !important;
         max-height: 60px !important;
-        overflow: hidden !important;
         flex-shrink: 0 !important;
         padding: 0 !important;
         margin: 0 !important;
     }
 
     .logo-img {
-        height: 56px !important;
-        max-height: 56px !important;
+        height: 60px !important;
+        max-height: 60px !important;
         width: auto !important;
         display: block !important;
         object-fit: contain !important;
