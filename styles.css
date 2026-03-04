@@ -46,8 +46,9 @@ nav {
 .nav-brand {
     display: flex;
     align-items: center;
-    gap: 0;
     flex-shrink: 0;
+    height: 90px;
+    margin-right: 3.5rem;
 }
 
 /* Logo styling */
@@ -55,9 +56,10 @@ nav {
     display: flex;
     align-items: center;
     text-decoration: none;
-    height: 100%;
+    height: 90px;
     padding: 0;
     margin: 0;
+    flex-shrink: 0;
 }
 
 .logo-img {
@@ -82,6 +84,7 @@ nav {
     margin-left: 20px;
     white-space: nowrap;
     transform: skewX(-25deg);
+    flex-shrink: 0;
 }
 
 .nav-links {
@@ -775,25 +778,37 @@ footer {
 @media (max-width: 768px) {
     nav {
         height: 70px;
-        padding: 0.5rem 0;
+        padding: 0;
     }
 
     .nav-container {
-        padding: 0;
-        padding-right: 1rem;
+        padding: 0 1rem 0 0;
+        align-items: center;
+    }
+
+    .nav-brand {
+        height: 70px;
+        margin-right: 0.5rem;
+        flex-direction: row;
+        align-items: center;
     }
 
     .logo {
+        height: 70px;
         margin-left: 0;
         padding-left: 0;
+        flex-shrink: 0;
     }
 
     .logo-img {
         height: 70px !important;
+        width: auto;
     }
 
     .alias {
-        font-size: 1rem;
+        font-size: 1.1rem;
+        margin-left: 10px;
+        transform: skewX(-25deg);
     }
 
     .hero, .page-header {
