@@ -56,7 +56,7 @@ nav {
     display: flex;
     align-items: center;
     text-decoration: none;
-    height: 90px;
+    height: 100%;
     padding: 0;
     margin: 0;
     flex-shrink: 0;
@@ -782,36 +782,46 @@ footer {
     nav {
         height: 70px;
         padding: 0;
+        overflow: visible;
     }
 
     .nav-container {
+        height: 70px;
         padding: 0 1rem 0 0;
         align-items: center;
     }
 
     .nav-brand {
-        height: 70px;
-        margin-right: 0.5rem;
+        display: flex;
         flex-direction: row;
         align-items: center;
+        height: 70px;
+        margin-right: 0.5rem;
+        overflow: hidden;
     }
 
     .logo {
+        display: flex;
+        align-items: center;
         height: 70px;
-        margin-left: 0;
-        padding-left: 0;
         flex-shrink: 0;
+        padding: 0;
+        margin: 0;
     }
 
     .logo-img {
         height: 70px !important;
-        width: auto;
+        width: auto !important;
+        max-height: 70px !important;
+        display: block;
     }
 
     .alias {
         font-size: 1.1rem;
-        margin-left: 10px;
+        margin-left: 8px;
         transform: skewX(-25deg);
+        white-space: nowrap;
+        flex-shrink: 0;
     }
 
     .hero, .page-header {
