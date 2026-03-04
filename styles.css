@@ -788,52 +788,56 @@ footer {
 /* Mobile Responsive */
 @media (max-width: 768px) {
     nav {
-        height: 70px;
+        height: 60px;
         padding: 0;
         overflow: visible;
     }
 
     .nav-container {
-        height: 70px;
+        height: 60px;
         padding: 0 1rem 0 0;
+        display: flex;
         align-items: center;
+        justify-content: space-between;
     }
 
     .nav-brand {
         display: flex;
         flex-direction: row;
         align-items: center;
-        height: 70px;
-        margin-right: 0.5rem;
-        overflow: hidden;
+        height: 60px;
+        flex-shrink: 0;
+        margin-right: 0;
+        overflow: visible;
     }
 
     .logo {
         display: flex;
         align-items: center;
-        height: 70px;
+        height: 60px;
         flex-shrink: 0;
         padding: 0;
         margin: 0;
     }
 
     .logo-img {
-        height: 70px !important;
+        height: 55px !important;
         width: auto !important;
-        max-height: 70px !important;
+        max-height: 55px !important;
         display: block;
     }
 
     .alias {
-        font-size: 1.1rem;
+        font-size: 1rem;
         margin-left: 8px;
         transform: skewX(-25deg);
         white-space: nowrap;
         flex-shrink: 0;
+        line-height: 1;
     }
 
     .hero, .page-header {
-        padding: 100px 2rem 60px;
+        padding: 80px 2rem 60px;
     }
 
     .emergency-content {
