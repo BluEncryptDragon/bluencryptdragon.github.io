@@ -1068,3 +1068,12 @@ footer {
     width: 20px;
     height: 20px;
 }
+
+.booking-cta h3 {
+    color: white !important;
+}
+
+.booking-cta p {
+    color: white !important;
+    opacity: 1 !important;
+}
