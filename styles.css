@@ -195,6 +195,17 @@ nav {
     box-shadow: 0 10px 30px rgba(220, 38, 38, 0.5);
 }
 
+/* Book a Service Now button - visible on light background */
+.services .btn-secondary {
+    color: #1e3c72;
+    border: 2px solid #1e3c72;
+}
+
+.services .btn-secondary:hover {
+    background: #1e3c72;
+    color: white;
+}
+
 /* Hero section button - Keep white */
 .hero .btn-primary {
     background: white;
