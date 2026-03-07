@@ -4,21 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ProSolv IT Managed Detection & Response</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      min-height: 100vh;
+      overflow-x: hidden;  /* Prevents horizontal scroll */
+      overflow-y: auto;    /* Enables vertical scroll */
+    }
+
+    .iframe-wrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 133%;
+    }
+
+    .iframe-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
 </head>
 <body>
 
   <h1>ProSolv IT Managed Security</h1>
   <p>Learn how we protect your business with Bitdefender MDR.</p>
 
-  <!-- Responsive Bitdefender LP iFrame -->
-  <div style="position: relative; width: 100%; padding-bottom: 133%;">
+  <div class="iframe-wrapper">
     <iframe 
       src="https://partner-marketing.bitdefender.com/wp/prosolvit-managed-security" 
-      frameborder="0" 
-      scrolling="no" 
-      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
-      webkitallowfullscreen 
-      mozallowfullscreen 
+      scrolling="auto"
       allowfullscreen>
     </iframe>
   </div>
