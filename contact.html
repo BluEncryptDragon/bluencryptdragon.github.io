@@ -174,10 +174,10 @@
         }
 
         .booking-cta-primary {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-        }
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
 
         .booking-cta-secondary {
             background: #ffffff;
@@ -196,33 +196,47 @@
         }
 
         .booking-cta h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            color: #1e3c72;
-        }
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #1e3c72;
+}
 
-        .booking-cta p {
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-            color: #555;
-            line-height: 1.6;
-        }
+.booking-cta p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.booking-cta-footer h3 {
+    color: white !important;
+    font-size: 2rem;
+}
+
+.booking-cta-footer p {
+    color: white !important;
+    opacity: 1;
+}
 
         .btn-booking {
-            display: inline-block;
-            font-size: 1.1rem;
-            padding: 1rem 2.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(30, 60, 114, 0.3);
-            transition: all 0.3s ease;
-            text-decoration: none;
-            font-weight: 600;
-        }
+    display: inline-block;
+    font-size: 1.1rem;
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-weight: 600;
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+    color: white !important;
+    border: none;
+}
 
         .btn-booking:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(30, 60, 114, 0.4);
-        }
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(185, 28, 28, 0.5);
+    background: linear-gradient(135deg, #b91c1c 0%, #991b1b 100%);
+}
 
         .btn-booking-white {
             background: white;
@@ -240,11 +254,12 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <a href="index.html" class="logo">
-    <img src="assets/images/prosolv-it-logo.png" alt="ProSolv IT Logo" class="logo-img">
-</a>
-
-<span class="alias">"Cyber Champ"</span>
+            <div class="nav-brand">
+    <a href="index.html" class="logo">
+        <img src="assets/images/prosolv-it-logo.png" alt="ProSolv IT Logo" class="logo-img">
+    </a>
+    <span class="alias">"Cyber Champ"</span>
+</div>
 
 
             <ul class="nav-links" id="navLinks">
@@ -253,8 +268,15 @@
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="terms.html">Terms & Conditions</a></li>
+                <li><a href="mdr.html">Cyber Security</a></li>
+                <li>
+                    <a href="https://outlook.office.com/book/ProSolvIT1@prosolvit.co.nz/"
+                       target="_blank" rel="noopener" class="nav-bookings">
+                       Book Now
+                    </a>
+                </li>
             </ul>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">&#9776;</button>
         </div>
     </nav>
 
@@ -277,15 +299,22 @@
                 <h3>Phone</h3>
                 <p>(+64) 022-522-3014</p>
                 <p>Mon–Fri: 9am–5pm</p>
-                <p>Emergency Support Available</p>
             </a>
 
             <!-- Email -->
-            <a href="mailto:support@prosolvit.co.nz" class="contact-card" aria-label="Email ProSolv IT">
-                <div class="contact-icon">✉️</div>
-                <h3>Email</h3>
-                <p>support@prosolvit.co.nz</p>
-            </a>
+<div class="contact-card">
+    <div class="contact-icon">✉️</div>
+    <h3>Email</h3>
+    <a href="mailto:info@prosolvit.co.nz" aria-label="Email ProSolv IT info">
+        <p>info@prosolvit.co.nz</p>
+    </a>
+    <a href="mailto:support@prosolvit.co.nz" aria-label="Email ProSolv IT support">
+        <p>support@prosolvit.co.nz</p>
+    </a>
+    <a href="mailto:sales@prosolvit.co.nz" aria-label="Email ProSolv IT sales">
+        <p>sales@prosolvit.co.nz</p>
+    </a>
+</div>
 
             <!-- Location -->
             <a href="https://www.google.com/maps/search/?api=1&query=Christchurch%2C+Canterbury%2C+New+Zealand"
@@ -304,7 +333,6 @@
                 <div class="contact-icon">⏰</div>
                 <h3>Response Time</h3>
                 <p>Same-day service available</p>
-                <p>Emergency calls: Within 2 hours</p>
             </div>
 
         </div>
@@ -330,7 +358,6 @@
     <h3 style="color: #1e3c72; margin-bottom: 1rem; font-size: 1.5rem;">Before You Book</h3>
     <p style="color: #333; line-height: 1.8; margin-bottom: 1rem;">To ensure we can help you efficiently, please note:</p>
     <ul style="color: #333; line-height: 1.8; margin-left: 1.5rem;">
-        <li>We provide residential IT support only</li>
         <li>Proof of device or account ownership may be required</li>
         <li>Data recovery and repairs are best-effort</li>
         <li>Older computers may not be economical to repair</li>
@@ -454,10 +481,20 @@
             </a>
         </li>
         <li>
-            <a href="mailto:support@prosolvit.co.nz" aria-label="Email ProSolv IT">
-                ✉️ support@prosolvit.co.nz
-            </a>
-        </li>
+    <a href="mailto:info@prosolvit.co.nz" aria-label="Email ProSolv IT">
+        ✉️ info@prosolvit.co.nz
+    </a>
+</li>
+<li>
+    <a href="mailto:support@prosolvit.co.nz" aria-label="Email ProSolv IT">
+        ✉️ support@prosolvit.co.nz
+    </a>
+</li>
+<li>
+    <a href="mailto:sales@prosolvit.co.nz" aria-label="Email ProSolv IT">
+        ✉️ sales@prosolvit.co.nz
+    </a>
+</li>
         <li>
             <a href="https://www.google.com/maps/search/?api=1&query=Christchurch%2C+Canterbury%2C+New+Zealand"
                target="_blank"
